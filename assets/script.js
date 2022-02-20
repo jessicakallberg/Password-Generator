@@ -7,7 +7,7 @@ var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","M","N"
 
 var theNums = ["1","2","3","4","5","6","7","8","9","10"]
 
-var special = ["!","@",]
+var special = ["!","@","#","$","%","^","&","*","(",")","-","+","=","?","<",">"]
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -30,16 +30,16 @@ function getPreferences(){
     }
     userPreferences.length = length
     console.log(userPreferences);
-    var lower = confirm("Do you want lower case letters")
+    var lower = confirm("Do you want lower case letters, OK for yes CANCEL for no ")
     userPreferences.lower = lower
     console.log(userPreferences)
-    var upper = confirm("Do you want upper case letters")
+    var upper = confirm("Do you want upper case letters, OK for yes CANCEL for no")
     userPreferences.upper = upper
     console.log(userPreferences)
-    var symbols = confirm("Do you want symbols characters")
+    var symbols = confirm("Do you want symbols characters, OK for yes CANCEL for no")
     userPreferences.symbols = symbols
     console.log(userPreferences)
-    var numeric = confirm("Do you want numeric characters")
+    var numeric = confirm("Do you want numeric characters, OK for yes CANCEL for no")
     userPreferences.numeric = numeric
     console.log(userPreferences)
     //make sure that user selected at least one symbol
@@ -63,21 +63,33 @@ function generatePassword(){
 
        //use if statement to check the type of characters the want then push
     if(preferences.lower){
-      console.log('they want lower case')
+      console.log()
       //if they do want it, push the lower case array into possible characters with concat method
       characters = characters.concat(lowerCase)
       console.log(characters)
-
-
     }
+
+    if(preferences.upper){
+      console.log()
+      characters = characters.concat(upperCase)
+    }
+    if(preferences.symbols){
+      characters = characters.concat(special)
+    }
+    if(preferences.numeric){
+      characters = characters.concat(theNums)
+    }
+
     //loop over possible characters and randomly select characters for length number of times
     for( var i = 0; i < preferences.length; i++){
       console.log()
       //grab a random element of the character array and push into pwd array
+      pwd.push(characters[Math.floor(Math.random() * characters.length)])
     }
+    console.log(pwd)
     //after you created that array you have to turn pwd into string
 
-    return pwd 
+    return pwd.join("")
 }
 
 
