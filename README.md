@@ -4,7 +4,7 @@
 
 This is an application that auto populates a specific password depending on the users preferences.  You are able to choose between 8-128 characters, as well as choose upper case, lower case, numeric, and symbols.  
 
-Very similar to what you would find partnered with an iphone, when having to use a password for specific sites or applications.  Many of times your iphone will ask you if you would like to use the password they auto generated or your own.  Its a great way to ensure you do not have a password that is too easy.  This could be used personally and professionally as well.  
+Very similar to what you would find partnered with an iphone, when having to use a password for specific sites or applications.  Many of times your iphone will ask you if you would like to use the password they auto generated or your own.  Its a great way to ensure you have greater security with the passwords you choose.  This could be used personally and professionally as well.  
 
 Although this was a straightforward assignment/project, I did face a few challenges.  One of the challenges I faced was understanding how to combine the users preferences together, turn into a string, then push into an empty array.  Understanding the concepts of Javascript is very possible, being able to put them into action is challenging. I do hear it gets better with practice! 
 
